@@ -8,7 +8,7 @@ export const informationAboutAllBooks = [
             lastName: 'Маккаммон',
         },
         rating: 10,
-        yearOfReading: 2022,
+        yearOfReading: 2024,
         pathBookUrl: './assets/book/Зов ночной птицы.fb2',
         bookSequence: {
             sequenceName: 'Мэтью Корбетт',

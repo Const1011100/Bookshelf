@@ -7,22 +7,23 @@ import { filters } from "./components/filters/filters.module.js";
 
 const elementWrapper = document.querySelector('.wrapper');
 const books = renderBooks(informationAboutAllBooks);
-const navigation = renderNavigation();
+const navigation = [renderNavigation(informationAboutAllBooks, 'yearOfReading')];
 
-elementWrapper.append(books, navigation);
+elementWrapper.append(books, navigation[0]);
 
 
 // Назначаем обработчики событий для всех чекбоксов
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', () => {
-        filters(informationAboutAllBooks);
+        filters(informationAboutAllBooks, 'yearOfReading');
+        //filters(informationAboutAllBooks, 'rating');
     });
 });
 
-// FIX: Решить проблему паралельной работы нескольких фильтров
+// FIX: Вирішити проблему одночасної роботи декілької фільтрів (yearOfReading і rating і тд.)
 
 // TODO: Фильтры по Автору, рейтингу, год прочтения
-// TODO: Поиск книги по названию через input
-// TODO: Добавление новой книги через input
-// TODO: Общий счетчик книг
-// TODO: Пагинация
+// TODO: Пошук книг по назві через input
+// TODO: Додавання нових книг через input
+// TODO: Загальний лічильник книг
+// TODO: Пігінація
