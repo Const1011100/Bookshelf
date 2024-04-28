@@ -1,0 +1,111 @@
+// подключаем обнуляющий стиль и миксины ==========================================================
+@import "_nulstyle";
+@import "_mixins";
+// ================================================================================================
+// Global =========================================================================================
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fb;
+}
+
+._container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px; //отступы от прилипания!
+    box-sizing: content-box; //позволяет нам компенсровать паддинги 15px от краев не меняя значение max-width
+    //background-color: rgb(89, 89, 89);
+}
+
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.books__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book {
+    //border: 1px solid rgb(24, 0, 241);
+    background-color: #ffffff;
+    height: 586px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    //flex: 0 1 33.333%;
+    box-shadow: 2px 0 15px 5px rgba(1,6,33,.06);
+    margin: 15px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cover {
+    padding: 135% 0 0 0;
+    //width: 310px;
+    // border-radius: 4px;
+    // overflow: hidden;
+}
+
+.title {
+    display: flex;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.author {
+    display: flex;
+    gap: 5px;
+    font-weight: 600;
+}
+
+.rating {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.year__reading {
+    font-weight: 600;
+}
+// ================================================================================================
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.my__input {
+    border: 1px red solid;
+}
+
+// ================================================================================================
+.show {
+    display: flex;
+}
+.hide {
+    display: none;
+}
+
+// .item__image:hover {
+//     opacity: 80%;
+// }
+// .item__image img:hover {
+//     transform: scale(1.05);
+// }
+
+// ================================================================================================
